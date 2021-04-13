@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<script>
+    let number;
+    number += prompt("nhập nhiệt độ");
+    do{
+        console.log(number);
+        if(number<20) {
+            alert("Tăng nhiệt độ");
+            number += prompt("nhập nhiệt độ");
+        } else if (number>100) {
+            alert("Giảm nhiệt độ");
+            number += prompt("nhập nhiệt độ");
+        }
+    }
+    while (number < 20 || number > 100);
+    document.write("nhiệt độ: " + number);
+</script>
+</body>
+</html>

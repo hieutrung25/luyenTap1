@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button onClick="run();">Chơi</button>
+    <script>
+        function run() {
+        alert("Nhập đoạn muốn đoán [a, b]");
+        let a = +prompt("Nhập a : ");
+        let b = +prompt("Nhập b : ");
+        if (a > b) {
+        a = b + ((b = a), 0);
+    }
+
+        let nuRandom = Math.round(Math.random() * (b - a)) + a;
+        alert(nuRandom);
+        let number;
+        do {
+        number = +prompt("Nhập dự đoán");
+        if (number < nuRandom) {
+        alert("Số bé hơn");
+    } else if (number > nuRandom) {
+        alert("Số lớn hơn");
+    } else {
+        alert("Dự đoán đúng");
+        break;
+    }
+    } while (number !== nuRandom);
+    }
+</script>
+
+</body>
+</html>
